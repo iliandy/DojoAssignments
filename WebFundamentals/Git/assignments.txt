@@ -1,0 +1,49 @@
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Users\Andy>cd Desktop
+
+C:\Users\Andy\Desktop>mkdir DojoAssignments
+
+C:\Users\Andy\Desktop>cd DojoAssignments
+
+C:\Users\Andy\Desktop\DojoAssignments>mkdir WebFundamentals Python MEAN Ruby
+
+C:\Users\Andy\Desktop\DojoAssignments>copy nul WebFundamentals\about.txt
+        1 file(s) copied.
+
+C:\Users\Andy\Desktop\DojoAssignments>copy nul Python\about.txt
+        1 file(s) copied.
+
+C:\Users\Andy\Desktop\DojoAssignments>copy nul MEAN\about.txt
+        1 file(s) copied.
+
+C:\Users\Andy\Desktop\DojoAssignments>copy nul Ruby\about.txt
+        1 file(s) copied.
+
+C:\Users\Andy\Desktop\DojoAssignments>cd WebFundamentals
+
+C:\Users\Andy\Desktop\DojoAssignments\WebFundamentals>mkdir Git HTML CSS JavaScript
+
+C:\Users\Andy\Desktop\DojoAssignments\WebFundamentals>copy nul Git\about.txt
+        1 file(s) copied.
+
+C:\Users\Andy\Desktop\DojoAssignments\WebFundamentals>copy nul HTML\about.txt
+        1 file(s) copied.
+
+C:\Users\Andy\Desktop\DojoAssignments\WebFundamentals>copy nul CSS\about.txt
+        1 file(s) copied.
+
+C:\Users\Andy\Desktop\DojoAssignments\WebFundamentals>copy nul JavaScript\about.txt
+        1 file(s) copied.
+
+C:\Users\Andy\Desktop\DojoAssignments\WebFundamentals>cd HTML
+
+C:\Users\Andy\Desktop\DojoAssignments\WebFundamentals\HTML>copy nul indentation.html
+        1 file(s) copied.
+
+C:\Users\Andy\Desktop\DojoAssignments\WebFundamentals\HTML>dir /b /s
+C:\Users\Andy\Desktop\DojoAssignments\WebFundamentals\HTML\about.txt
+C:\Users\Andy\Desktop\DojoAssignments\WebFundamentals\HTML\indentation.html
+
+C:\Users\Andy\Desktop\DojoAssignments\WebFundamentals\HTML>
