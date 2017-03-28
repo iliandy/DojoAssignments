@@ -1,0 +1,59 @@
+Microsoft Windows [Version 10.0.14393]
+(c) 2016 Microsoft Corporation. All rights reserved.
+
+C:\Users\Andy>cd Desktop
+
+C:\Users\Andy\Desktop>mkdir test
+
+C:\Users\Andy\Desktop>cd test
+
+C:\Users\Andy\Desktop\test>copy nul index.html
+        1 file(s) copied.
+
+C:\Users\Andy\Desktop\test>copy nul styles.css
+        1 file(s) copied.
+
+C:\Users\Andy\Desktop\test>copy nul commands.txt
+        1 file(s) copied.
+
+C:\Users\Andy\Desktop\test>copy index.html index_2.html
+        1 file(s) copied.
+
+C:\Users\Andy\Desktop\test>del styles.css
+
+C:\Users\Andy\Desktop\test>cd ..
+
+C:\Users\Andy\Desktop>mkdir destination
+
+C:\Users\Andy\Desktop>move test\index_2.html destination
+        1 file(s) moved.
+
+C:\Users\Andy\Desktop>dir test
+ Volume in drive C has no label.
+ Volume Serial Number is 4CE3-0C08
+
+ Directory of C:\Users\Andy\Desktop\test
+
+02/28/2017  10:48 AM    <DIR>          .
+02/28/2017  10:48 AM    <DIR>          ..
+02/28/2017  10:44 AM                 0 commands.txt
+02/28/2017  10:43 AM                 0 index.html
+               2 File(s)              0 bytes
+               2 Dir(s)  124,737,396,736 bytes free
+
+C:\Users\Andy\Desktop>dir destination
+ Volume in drive C has no label.
+ Volume Serial Number is 4CE3-0C08
+
+ Directory of C:\Users\Andy\Desktop\destination
+
+02/28/2017  10:48 AM    <DIR>          .
+02/28/2017  10:48 AM    <DIR>          ..
+02/28/2017  10:43 AM                 0 index_2.html
+               1 File(s)              0 bytes
+               2 Dir(s)  124,737,323,008 bytes free
+
+C:\Users\Andy\Desktop>rmdir /s destination
+destination, Are you sure (Y/N)? y
+
+C:\Users\Andy\Desktop>

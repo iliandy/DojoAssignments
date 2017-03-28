@@ -1,0 +1,30 @@
+* {
+  outline: 0;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.container{
+  font-family: "Palatino Linotype", Georgia, serif;
+  padding: 20px;
+  width: 960px;
+}
+
+.container > img{
+  width: 200px;
+  margin: 20px;
+}
+
+input{
+  background-color: green;
+  padding: 5px 10px;
+  border: 1px solid black;
+  box-shadow: 3px 3px 3px black;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.invisible{
+  visibility: hidden;
+}

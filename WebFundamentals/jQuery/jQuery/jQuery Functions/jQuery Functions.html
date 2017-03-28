@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Functions</title>
+    <link rel="stylesheet" href="css/master.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(".click input").click(function() {
+          alert("Congrats on clicking the button!");
+        })
+
+        $(".hide input").click(function() {
+          $(".hide p").hide();
+        })
+
+        $(".show input").click(function() {
+          $(".show p:nth-child(4)").show("slow");
+        })
+
+        $(".toggle input").click(function() {
+          $(".toggle p:nth-child(4)").toggle("slow");
+        })
+
+        $(".slideDown input").click(function() {
+          $(".slideDown p:nth-child(4)").slideDown("slow");
+        })
+
+        $(".slideUp input").click(function() {
+          $(".slideUp p:nth-child(4)").slideUp("slow");
+        })
+
+        $(".slideToggle input").click(function() {
+          $(".slideToggle p:nth-child(4)").slideToggle("slow");
+        })
+
+        $(".fadeIn input").click(function() {
+          $(".fadeIn p:nth-child(4)").fadeIn("slow");
+        })
+
+        $(".fadeOut input").click(function() {
+          $(".fadeOut p:nth-child(4)").fadeOut("slow");
+        })
+
+        $(".addClass input").click(function() {
+          $(this).addClass("blue_color");
+        })
+
+        $(".before input").click(function() {
+          $(".before p:nth-child(4)").before("<p>Before text!</p>");
+        })
+
+        $(".after input").click(function() {
+          $(".after p:nth-child(4)").after("<p>After text!</p>");
+        })
+
+        $(".append input").click(function() {
+          $(".append p:nth-child(4)").append("<p>Appended text!</p>");
+        })
+
+        $(".html input").click(function() {
+          $(".html p:nth-child(4)").html("This is new text added to a blank paragraph set by html().");
+        })
+
+        $(".attr input").click(function() {
+          $(".attr input").attr("type", "text");
+        })
+
+        $(".val input").click(function() {
+          $(".val input").val("Woot!");
+        })
+
+        $(".text input").click(function() {
+          $(".text p:nth-child(4)").text("This is new text added to a blank paragraph set by text().");
+        })
+
+        $(".data input").click(function() {
+          $(".data p:nth-child(4)").data("key1", "value1");
+          $(".data p:nth-child(4)").text("Paragraph was set by data key value pair info and current value = " + $(".data p:nth-child(4)").data("key1") + ".");
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="click">
+        <h1>Click</h1>
+        <input type="button" name="click" value="Click">
+        <p>Bind an event handler to the “click” JavaScript event, or trigger that event on an element.</p>
+      </div>
+
+      <div class="hide">
+        <h1>Hide</h1>
+        <input type="button" name="hide" value="Hide">
+        <p>Hide the matched elements.</p>
+      </div>
+
+      <div class="show">
+        <h1>Show</h1>
+        <input type="button" name="show" value="Show">
+        <p>Display the matched elements.</p>
+        <p style="display: none">This text shows!</p>
+      </div>
+
+      <div class="toggle">
+        <h1>Toggle</h1>
+        <input type="button" name="toggle" value="Toggle">
+        <p>Display or hide the matched elements.</p>
+        <p style="display: none">This text toggles!</p>
+      </div>
+
+      <div class="slideDown">
+        <h1>Slide Down</h1>
+        <input type="button" name="slideDown" value="Slide Down">
+        <p>Display the matched elements with a sliding motion.</p>
+        <p style="display: none; background: red; height: 50px; width: 50px"></p>
+      </div>
+
+      <div class="slideUp">
+        <h1>Slide Up</h1>
+        <input type="button" name="slideUp" value="Slide Up">
+        <p>Hide the matched elements with a sliding motion.</p>
+        <p style="background: blue; height: 50px; width: 50px"></p>
+      </div>
+
+      <div class="slideToggle">
+        <h1>Slide Toggle</h1>
+        <input type="button" name="slideToggle" value="Slide Toggle">
+        <p>Display or hide the matched elements with a sliding motion.</p>
+        <p style="display: none; background: purple; height: 50px; width: 50px"></p>
+      </div>
+
+      <div class="fadeIn">
+        <h1>Fade In</h1>
+        <input type="button" name="fadeIn" value="Fade In">
+        <p>Display the matched elements by fading them to opaque.</p>
+        <p style="display: none; background: black; height: 50px; width: 50px"></p>
+      </div>
+
+      <div class="fadeOut">
+        <h1>Fade Out</h1>
+        <input type="button" name="fadeOut" value="Fade Out">
+        <p>Hide the matched elements by fading them to transparent.</p>
+        <p style="background: gray; height: 50px; width: 50px"></p>
+      </div>
+
+      <div class="addClass">
+        <h1>Add Class</h1>
+        <input type="button" name="addClass" value="Add Class">
+        <p>Adds the specified class(es) to each element in the set of matched elements.</p>
+        <p>Button text will be selected to add class .blue_color and turn blue.</p>
+      </div>
+
+      <div class="before">
+        <h1>Before</h1>
+        <input type="button" name="before" value="Before">
+        <p>Insert content, specified by the parameter, before each element in the set of matched elements.</p>
+        <p>Some text will show up before this text and p tag.</p>
+      </div>
+
+      <div class="after">
+        <h1>After</h1>
+        <input type="button" name="after" value="After">
+        <p>Insert content, specified by the parameter, after each element in the set of matched elements.</p>
+        <p>Some text will show up after this text and p tag.</p>
+      </div>
+
+      <div class="append">
+        <h1>Append</h1>
+        <input type="button" name="append" value="Append">
+        <p>Insert content, specified by the parameter, to the end of each element in the set of matched elements.</p>
+        <p>Some text will be appended at end of this text, but before end p tag.</p>
+      </div>
+
+      <div class="html">
+        <h1>HTML</h1>
+        <input type="button" name="html" value="HTML">
+        <p>Get the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched element.</p>
+        <p></p>
+      </div>
+
+      <div class="attr">
+        <h1>Attribute</h1>
+        <input type="button" name="attr" value="Attribute">
+        <p>Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for the set of matched elements.</p>
+        <p>After clicking button, input attribute type changes from button to text field.</p>
+      </div>
+
+      <div class="val">
+        <h1>Value</h1>
+        <input type="button" name="val" value="Value">
+        <p>Get the current value of the first element in the set of matched elements or set the value of every matched element.</p>
+        <p>After clicking button, input value of button changes to "Woot!"</p>
+      </div>
+
+      <div class="text">
+        <h1>Text</h1>
+        <input type="button" name="text" value="Text">
+        <p>Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.</p>
+        <p></p>
+      </div>
+
+      <div class="data">
+        <h1>Data</h1>
+        <input type="button" name="data" value="Data">
+        <p>Store arbitrary data associated with the matched elements or return the value at the named data store for the first element in the set of matched elements.</p>
+        <p></p>
+      </div>
+
+    </div>
+  </body>
+</html>

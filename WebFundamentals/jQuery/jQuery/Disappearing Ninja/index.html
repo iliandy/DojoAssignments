@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Disappearing Mario!</title>
+    <link rel="stylesheet" href="css/master.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var marioImgsStr = "";
+
+        for (var i = 0; i < 8; i++) {
+          marioImgsStr += '<img src="img/Mario_star.png" alt="Mario w/ star img">';
+        }
+        $(".container h1").after(marioImgsStr);
+
+        $("img").click(function(){
+          $(this).addClass("invisible");
+        })
+
+        $("input").click(function(){
+          $("img").removeClass("invisible");
+        })
+
+      });
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>jQuery Disappearing Mario!</h1>
+      <!-- 8 Mario /w star img tags will be added here -->
+      <input type="reset" name="reset" value="Restore">
+      <p>When an image is clicked, it will disappear!</p>
+    </div>
+
+  </body>
+</html>

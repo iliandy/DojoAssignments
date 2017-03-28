@@ -1,0 +1,35 @@
+*{
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+#topnav{
+  font-family: "Palatino Linotype", "Georgia", serif;
+}
+
+#topnav ul{
+  list-style: none;
+}
+
+#topnav ul li{
+  float: left;
+}
+
+#topnav ul li a{
+  display: inline-block;
+  background-color: green;
+  color: white;
+  width: 100px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+#topnav ul li a:hover{
+  background-color: white;
+  color: green;
+}

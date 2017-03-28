@@ -18,51 +18,53 @@
 
     <div class="consoles">
       <table class="home_con">
-        <tr>
-          <th>Home Console Name</th>
-          <th>Release Date</th>
-          <th>Launch Price</th>
-        </tr>
-        <tr>
-          <td>Color TV-Game</td>
-          <td>01 Jun 1977</td>
-          <td>¥9,800</td>
-        </tr>
-        <tr>
-          <td>Nintendo Entertainment System (NES)</td>
-          <td>18 Oct 1985</td>
-          <td>$200</td>
-        </tr>
-        <tr>
-          <td>Super Nintendo Entertainment System (SNES)</td>
-          <td>23 Aug 1991</td>
-          <td>$200</td>
-        </tr>
-        <tr>
-          <td>Nintendo 64 (N64)</td>
-          <td>29 Sep 1996</td>
-          <td>$200</td>
-        </tr>
-        <tr>
-          <td>Nintendo GameCube (GCN)</td>
-          <td>18 Nov 2001</td>
-          <td>$200</td>
-        </tr>
-        <tr>
-          <td>Wii</td>
-          <td>19 Nov 2006</td>
-          <td>$250</td>
-        </tr>
-        <tr>
-          <td>Wii U</td>
-          <td>18 Nov 2012</td>
-          <td>$300</td>
-        </tr>
-        <tr>
-          <td><a href="https://youtu.be/CdWd8fUC71g">Switch</a></td>
-          <td>03 Mar 2017</td>
-          <td>$300</td>
-        </tr>
+        <tbody>
+          <tr>
+            <th>Home Console Name</th>
+            <th>Release Date</th>
+            <th>Launch Price</th>
+          </tr>
+          <tr>
+            <td>Color TV-Game</td>
+            <td>01 Jun 1977</td>
+            <td>¥9,800</td>
+          </tr>
+          <tr>
+            <td>Nintendo Entertainment System (NES)</td>
+            <td>18 Oct 1985</td>
+            <td>$200</td>
+          </tr>
+          <tr>
+            <td>Super Nintendo Entertainment System (SNES)</td>
+            <td>23 Aug 1991</td>
+            <td>$200</td>
+          </tr>
+          <tr>
+            <td>Nintendo 64 (N64)</td>
+            <td>29 Sep 1996</td>
+            <td>$200</td>
+          </tr>
+          <tr>
+            <td>Nintendo GameCube (GCN)</td>
+            <td>18 Nov 2001</td>
+            <td>$200</td>
+          </tr>
+          <tr>
+            <td>Wii</td>
+            <td>19 Nov 2006</td>
+            <td>$250</td>
+          </tr>
+          <tr>
+            <td>Wii U</td>
+            <td>18 Nov 2012</td>
+            <td>$300</td>
+          </tr>
+          <tr>
+            <td><a href="https://youtu.be/CdWd8fUC71g">Switch</a></td>
+            <td>03 Mar 2017</td>
+            <td>$300</td>
+          </tr>
+        </tbody>
       </table>
     </div>
 
@@ -81,14 +83,16 @@
       <h3>Survey Form</h3>
       <form class="survey_form" method="post">
         <table>
-          <tr>
-            <td><label for="name">Full Name:</label></td>
-            <td><input type="text" id="name" name="name"><br></td>
-          </tr>
-          <tr>
-            <td><label for="email">e-mail:</label></td>
-            <td><input type="email" id="email" name="email"><br></td>
-          </tr>
+          <tbody>
+            <tr>
+              <td><label for="name">Full Name:</label></td>
+              <td><input type="text" id="name" name="name"><br></td>
+            </tr>
+            <tr>
+              <td><label for="email">e-mail:</label></td>
+              <td><input type="email" id="email" name="email"><br></td>
+            </tr>
+          </tbody>
         </table>
 
         <p>Are you a Nintendo fan?<br>
@@ -118,7 +122,10 @@
         <input type="checkbox" id="wii" name="wii" value="wii">
 
         <label for="wii_u">Wii U</label>
-        <input type="checkbox" id="wii_u" name="wii_u" value="wii_u"><br>
+        <input type="checkbox" id="wii_u" name="wii_u" value="wii_u">
+
+        <label for="switch">Switch</label>
+        <input type="checkbox" id="switch" name="switch" value="switch"><br>
 
         <label for="game_watch">Game & Watch</label>
         <input type="checkbox" id="game_watch" name="game_watch" value="game_watch">
@@ -177,6 +184,7 @@
           <option value="gcn">GCN</option>
           <option value="wii">Wii</option>
           <option value="wii_u">Wii U</option>
+          <option value="switch">Switch</option>
           <option value="game_watch">Game & Watch</option>
           <option value="game_boy">Game Boy</option>
           <option value="gbp">Game Boy Pocket</option>
