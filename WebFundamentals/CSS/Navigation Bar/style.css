@@ -7,14 +7,19 @@
 
 #topnav{
   font-family: "Palatino Linotype", "Georgia", serif;
+  width: 960px;
+  padding: 20px;
+  margin: auto;
+  text-align: center;
 }
 
 #topnav ul{
   list-style: none;
+  display: inline-block;
 }
 
 #topnav ul li{
-  float: left;
+  display: inline-block;
 }
 
 #topnav ul li a{

@@ -1,0 +1,66 @@
+*{
+  outline: 0;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.container{
+  font-family: "Palatino Linotype", Georgia, serif;
+  padding: 20px;
+  background: linear-gradient(yellow, green);
+}
+
+.user_input{
+  display: inline-block;
+  width: 300px;
+}
+
+label {
+  display: inline-block;
+  width: 90px;
+}
+
+input{
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid gray;
+  width: 150px;
+}
+
+textarea{
+  display: block;
+}
+
+#submit_but{
+  padding: 2px 5px;
+  margin-top: 20px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px black;
+  display: block;
+}
+
+.gen_cards{
+  display: inline-block;
+  vertical-align: top;
+  overflow: auto;
+  margin-left: 200px;
+}
+
+.new_cards{
+  background-color: black;
+  color: white;
+  width: 300px;
+  height: 100px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.new_cards button {
+  display: block;
+  margin: auto;
+  padding: 2px 5px;
+  margin: 10px auto auto auto;
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px white;
+}

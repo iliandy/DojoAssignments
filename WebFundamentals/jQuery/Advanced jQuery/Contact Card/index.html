@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Card</title>
+    <link rel="stylesheet" href="css/master.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#submit_but").click(function() {
+          var f_name = $("#first_name").val();
+          var l_name = $("#last_name").val();
+          var desc_t = $("#desc_txt").val();
+
+          var newContactCard = '<div class="new_cards"><h1>' + f_name + ' ' +
+           l_name + '</h1><button type="button" name="dyn_btn">Click for description!</button></div>';
+
+          $(".gen_cards").append(newContactCard);
+
+          $(".gen_cards .new_cards:last-child button").data("desc", desc_t);      // set desc_t only into last generated card button
+
+          $("#first_name").val("");      //
+          $("#last_name").val("");       // reset user input fields
+          $("#desc_txt").val("");        //
+
+          $(".gen_cards").on("click", ".new_cards button", function(){
+
+            desc_t_val = $(this).data("desc");
+            $(this).parent().html("<p>" + desc_t_val + "</p>");
+
+          });      // end of dyn_btn click
+        });      // end of submit_but click
+      });
+    </script>
+
+  </head>
+  <body>
+    <div class="container">
+      <form class="user_input" action="index.html" method="post">
+        <h1>Contact Card</h1>
+        <label for="first_name">First Name: </label>
+        <input type="text" name="first_name" placeholder="First Name" value="" id="first_name">
+        <label for="last_name">Last Name: </label>
+        <input type="text" name="last_name" placeholder="Last Name" value="" id="last_name">
+        <label for=desc_txt>Description: </label>
+        <textarea name="desc_txt" rows="5" cols="25" placeholder="Description" id="desc_txt"></textarea>
+
+        <button type="button" name="add_user" id="submit_but">Add User</button>
+      </form>
+
+      <div class="gen_cards">
+        <!-- Contact cards dynamically generated here -->
+      </div>
+
+    </div>
+  </body>
+</html>

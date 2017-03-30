@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Users</title>
+    <link rel="stylesheet" href="css/master.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $(document).on("click", "#submit_but", function(){
+          var f_name = $("#first_name").val();
+          var l_name = $("#last_name").val();
+          var e_mail = $("#email").val();
+          var c_num = $("#contact_num").val();
+
+          var newUserEntry = "<tr><td>" + f_name + "</td>" +
+            "<td>" + l_name + "</td>" +
+            "<td>" + e_mail + "</td>" +
+            "<td>" + c_num + "</td></tr>"
+
+          $("tbody").append(newUserEntry);
+
+          $("#first_name").val("");
+          $("#last_name").val("");
+          $("#email").val("");
+          $("#contact_num").val("");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <tbody>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Contact Num</th>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="user_form">
+        <h1>Add User</h1>
+        <form class="form1" action="index.html" method="post">
+          <label>First Name:
+            <input type="text" name="first_name" placeholder="First Name" id="first_name">
+          </label>
+          <label>Last Name:
+            <input type="text" name="last_name" placeholder="Last Name" id="last_name">
+          </label>
+          <label>Email Address:
+            <input type="email" name="email" placeholder="Email Address" id="email">
+          </label>
+          <label>Contact Num:
+            <input type="text" name="contact_num" placeholder="Phone Num" id="contact_num">
+          </label>
+
+          <input type="button" name="add_user" value="Add User" id="submit_but">
+
+        </form>
+      </div> <!-- close user_form div -->
+
+    </div> <!-- close container div -->
+  </body>
+</html>
