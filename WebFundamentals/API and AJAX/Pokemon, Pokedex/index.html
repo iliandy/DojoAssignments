@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon</title>
+    <link rel="stylesheet" href="css/master.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // create img tags for Pokemon imgs
+        poke_imgs_dir = "http://pokeapi.co/media/img/";
+
+        for(var img_num = 1; img_num <= 151; img_num++){
+          imgs_tag = '<img id=' + img_num + ' ' + 'src=' + poke_imgs_dir + img_num + '.png>';
+          $(".poke_imgs").append(imgs_tag);
+        }
+
+        $(".poke_imgs").on("click", 'img', function() {
+          var poke_id = $(this).attr("id");
+          $.get("http://pokeapi.co/api/v1/pokemon/" + poke_id, function(data) {
+            // for loop to create ul of all array type info for clicked Pokemon
+            var types_str = "<ul>"
+            for(var i= 0; i < data.types.length; i++){
+              var poke_types = data.types[i].name;
+              types_str += "<li>" + poke_types + "</li>"
+            }
+            types_str += "</ul>";
+
+            // verifying JSON data
+            // console.log(data);
+            // console.log(data.name, types_str, data.height, data.weight);
+
+            var img_str = "<img id=" + poke_id + ' ' + 'src=' + poke_imgs_dir + poke_id + ".png>";
+
+            $(".poke_info").html("<h1>" + data.name + "</h1>" + img_str + "<h4>Types</h4>" + types_str + "<h4>Height</h4><p>" + data.height + "</p><h4>Weight</h4><p>" + data.weight + "</p>");
+
+          }, "json");
+
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="poke_imgs">
+        <!-- All 152 Pokemon imgs appended here -->
+      </div>
+
+      <div class="poke_info">
+
+      </div>
+
+    </div>
+  </body>
+</html>
